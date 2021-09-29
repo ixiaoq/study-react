@@ -1,18 +1,15 @@
 import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
+import { BrowserRouter as Router } from 'react-router-dom'
 
-export default class App extends Component {
-  render() {
-    return (
-      <div className="container">
-        Hello React!
-      </div>
-    )
-  }
-}
+import App from '@/layouts/App/App'
+
+import './style/global.css'
 
 ReactDOM.render(
-  <App />,
+  <Router>
+    <App />
+  </Router>,
   document.getElementById('root')
 )
 
