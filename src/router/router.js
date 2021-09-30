@@ -9,7 +9,12 @@ import NotFound from '@/pages/NotFound/NotFound'
 const getRouter = () => (
   <Switch>
     <Route path="/" exact component={ Home }></Route>
-    <Route path="/core" component={ Core }></Route>
+    <Route path="/core/" children={(route) => {
+      console.log('route', route)
+      return (
+        <Core />
+      )
+    }}></Route>
     <Route path="/advanced" component={ Advanced }></Route>
     <Route component={ NotFound }></Route>
   </Switch>

@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 
+let timer
+
 export default class Clock extends Component {
   constructor (props) {
     super(props)
@@ -9,11 +11,15 @@ export default class Clock extends Component {
   }
 
   componentDidMount () {
-    setInterval(() => {
+    timer = setInterval(() => {
       this.setState({
         date: new Date().toLocaleTimeString()
       })
     }, 1000);
+  }
+
+  componentWillUnmount () {
+    clearInterval(timer)
   }
 
   render() {

@@ -3,8 +3,9 @@ import { Switch, Route } from "react-router"
 
 import Nav from '@/components/Nav/Nav'
 
-import Clock from './components/Clock';
-import Props from './components/ComponentOrProps';
+import Index from './Index'
+import Clock from './components/Clock'
+import Props from './components/ComponentOrProps'
 
 const navList = [
   {
@@ -25,8 +26,9 @@ export default class Core extends Component {
         <Nav navList={ navList } />
 
         <Switch>
-          <Route path="/core/props" component={ Props }></Route>
-          <Route path="/core/state" exact component={ Clock }></Route>
+          <Route path="/core" component={ Index }></Route>
+          <Route path="/core/:props" component={ Props }></Route>
+          <Route path="/core/:state" exact component={ Clock }></Route>
         </Switch>
       </div>
     )
