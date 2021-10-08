@@ -11,7 +11,7 @@ const navList = [
     name: '首页'
   },
   {
-    path: '/core',
+    path: '/core/index',
     name: '核心概念'
   },
   {

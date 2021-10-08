@@ -20,15 +20,15 @@ const navList = [
 
 export default class Core extends Component {
   render() {
-    console.log(this.props)
+
     return (
       <div>
         <Nav navList={ navList } />
 
         <Switch>
-          <Route path="/core" component={ Index }></Route>
-          <Route path="/core/:props" component={ Props }></Route>
-          <Route path="/core/:state" exact component={ Clock }></Route>
+          <Route path="/core/index" component={ Index }></Route>
+          <Route path="/core/props" component={ Props }></Route>
+          <Route path="/core/state" component={ Clock }></Route>
         </Switch>
       </div>
     )
