@@ -1,7 +1,8 @@
-import React, { Component } from 'react'
+import React, { Component, Suspense } from 'react'
 import getRouter from '@/router/router'
 
 import GlobalNav from '@/components/GlobalNav/GlobalNav'
+import Loading from '@/components/Loading/Loading'
 
 
 // 导航菜单
@@ -36,8 +37,10 @@ export default class App extends Component {
   render() {
     return (
       <div className="app">
-        <GlobalNav navList={ navList } />
-        { getRouter() }
+        <Suspense fallback={<Loading />}>
+          <GlobalNav navList={ navList } />
+          { getRouter() }
+        </Suspense>
       </div>
     )
   }
