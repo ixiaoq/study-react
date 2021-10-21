@@ -1,31 +1,40 @@
 import React, { Component } from 'react'
 
-function Columns () {
+function ColumnsHead () {
   return (
     <>
-      <td>1</td>
-      <td>2</td>
-      <td>3</td>
+      <th>111</th>
+      <th>22</th>
+      <th>3333</th>
     </>
   )
 }
-// function Columns () {
-//   return (
-//     <React.Fragment>
-//       <td>1</td>
-//       <td>2</td>
-//       <td>3</td>
-//     </React.Fragment>
-//   )
-// }
+function Columns () {
+  return (
+    <React.Fragment>
+      <td>1</td>
+      <td>2</td>
+      <td>3</td>
+    </React.Fragment>
+  )
+}
 
 
 export default class Fragments extends Component {
   render() {
     return (
-      <tr>
-        <Columns/>
-      </tr>
+      <table border='1' cellspacing='0' cellpadding="2">
+        <thead>
+          <tr>
+            <ColumnsHead />
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <Columns />
+          </tr>
+        </tbody>
+      </table>
     )
   }
 }
