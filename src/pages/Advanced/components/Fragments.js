@@ -23,7 +23,7 @@ function Columns () {
 export default class Fragments extends Component {
   render() {
     return (
-      <table border='1' cellspacing='0' cellpadding="2">
+      <table border='1' >
         <thead>
           <tr>
             <ColumnsHead />
